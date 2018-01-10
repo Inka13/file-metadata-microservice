@@ -26,7 +26,7 @@ app.get("/", function (request, response) {
 //});
 
 // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/", function (request, response) {
+app.post("/size", function (request, response) {
   
   response.send('test');
 });
