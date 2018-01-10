@@ -1,7 +1,19 @@
 
 var express = require('express');
-var app = express();
+const multer = require('multer');
+const path = require('path');
 
+var app = express();
+const storage = multer.diskStorage({
+  destination: './public/',
+  filename: (req, file, cb) => {
+    cb(null,file.fieldname + "-" + Date.now() + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({
+
+});
 app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
