@@ -21,12 +21,12 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get("/", function (request, response) {
-  response.send(dreams);
-});
+//app.get("/", function (request, response) {
+ // response.send(dreams);
+//});
 
 // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/size", function (request, response) {
+app.post("/", function (request, response) {
   
   response.send('test');
 });
