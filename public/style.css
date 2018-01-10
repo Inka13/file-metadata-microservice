@@ -15,17 +15,18 @@ h1 {
   color: darkblue;
 }
 main {
-  width: 350px;
+  width: 450px;
   margin:auto;
   box-shadow: 2px 2px 8px grey;
 }
-
+p {
+  text-align: center;
+}
 form {
   padding: 15px;
-  background-color: cyan;
   display: inline-block;
   width: 100%;
-  max-width: 350px;
+  max-width: 450px;
   border-radius: 3px;
 }
 
@@ -39,20 +40,18 @@ input {
   font-size: 16px;
 }
 
-button {
+input#submit {
   font-size: 16px;
-  border-radius: 3px;
   background-color: lightgrey;
   border: 1px solid grey;
-  box-shadow: 2px 2px teal;
   cursor: pointer;
 }
 
-button:hover {
+input#submit:hover {
   background-color: yellow;
 }
 
-button:active {
+input#submit:active {
   box-shadow: none;
 }
 
