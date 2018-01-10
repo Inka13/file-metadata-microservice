@@ -5,7 +5,7 @@ const path = require('path');
 
 var app = express();
 const storage = multer.diskStorage({
-  destination: './public/',
+  destination: 'public/upload',
   filename: (req, file, cb) => {
     cb(null,file.fieldname + "-" + Date.now() + path.extname(file.originalname));
   }
@@ -26,8 +26,8 @@ app.get("/", function (request, response) {
 //});
 
 // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/size", function (request, response) {
-  
+app.post("/size", upload, function (request, response) {
+  console.log(request.file);
   response.send('test');
 });
 
