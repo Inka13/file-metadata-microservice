@@ -14,6 +14,10 @@ h1 {
   font-weight: bold;
   color: darkblue;
 }
+a {
+text-decoration: none;
+  color: green;
+}
 main {
   width: 450px;
   margin:auto;
