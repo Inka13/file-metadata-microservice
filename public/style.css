@@ -8,30 +8,24 @@ body {
 }
 header {
   text-align: center;
+  border-bottom: 1px solid lightgrey;
 }
 h1 {
   font-weight: bold;
-  color: pink;
+  color: darkblue;
 }
 main {
   width: 350px;
   margin:auto;
-}
-.bold {
-  font-weight: bold;
-}
-
-p {
-  max-width: 600px;
+  box-shadow: 2px 2px 8px grey;
 }
 
 form {
-  margin-bottom: 25px;
   padding: 15px;
   background-color: cyan;
   display: inline-block;
   width: 100%;
-  max-width: 340px;
+  max-width: 350px;
   border-radius: 3px;
 }
 
@@ -62,20 +56,3 @@ button:active {
   box-shadow: none;
 }
 
-li {
-  margin-bottom: 5px;
-}
-
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
-}
-
-footer > a {
-  color: #BBBBBB;
-}
-
-.nicejob {
-  text-decoration: line-through;
-}
