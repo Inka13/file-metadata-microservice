@@ -1,14 +1,11 @@
 
 var express = require('express');
 const multer = require('multer');
-const path = require('path');
+//const path = require('path');
 
 var app = express();
 const storage = multer.diskStorage({
-  destination: 'public/upload',
-  filename: (req, file, cb) => {
-    cb(null,file.fieldname + "-" + Date.now() + path.extname(file.originalname));
-  }
+  destination: 'public/upload'
 });
 
 const upload = multer({
@@ -21,22 +18,11 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-//app.get("/", function (request, response) {
- // response.send(dreams);
-//});
 
-// could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
 app.post("/size", upload, function (request, response) {
   console.log(request.file);
-  response.send('test');
+  response.send({size: request.file.size});
 });
-
-// Simple in-memory store for now
-var dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
